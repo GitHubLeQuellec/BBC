@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Commande : MonoBehaviour
 {
-    public float moveSpeed = 5f; // vitesse de déplacement
+    public float moveSpeed = 10f; // vitesse de déplacement
     public float jumpForce = 10f; // force de saut
     public Transform groundCheck; // objet qui vérifie si le joueur touche le sol
     public LayerMask groundLayer; // couche du sol
