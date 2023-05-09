@@ -13,7 +13,7 @@ public class Grab : MonoBehaviour
     private Vector2 aidepose;
     [SerializeField] GameObject aide;
     float range = 5;
-    float grabPower = 10000;
+    float grabPower = 100;
     public GameObject aim;
     [SerializeField] float limitGrabByPlayer = 10;
 

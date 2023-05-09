@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class box : MonoBehaviour
+public class Crochet : MonoBehaviour
 {
     // Vitesse de déplacement de l'objet
     public float speed = 5f;
@@ -8,7 +8,7 @@ public class box : MonoBehaviour
     // La position à partir de laquelle l'objet est considéré comme "hors-cadre"
     public float destroyPosition = -50f;
 
-    
+
 
     // La position où téléporter l'objet
     public Vector3 teleportPosition = new Vector3(94f, -2.6f, 0f);
