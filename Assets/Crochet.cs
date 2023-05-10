@@ -8,10 +8,9 @@ public class Crochet : MonoBehaviour
     // La position à partir de laquelle l'objet est considéré comme "hors-cadre"
     public float destroyPosition = -50f;
 
-
-
     // La position où téléporter l'objet
-    public Vector3 teleportPosition = new Vector3(94f, -2.6f, 0f);
+    Vector3 teleportPosition = new Vector3(94f, -1.15f, 0f);
+
 
     void Update()
     {
@@ -30,6 +29,7 @@ public class Crochet : MonoBehaviour
         if (collision.gameObject.name == "mur2")
         {
             transform.position = teleportPosition;
+
         }
     }
 }

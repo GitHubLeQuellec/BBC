@@ -13,7 +13,7 @@ public class Grab : MonoBehaviour
     private Vector2 aidepose;
     [SerializeField] GameObject aide;
     float range = 5;
-    float grabPower = 100;
+    float grabPower = 10000;
     public GameObject aim;
     [SerializeField] float limitGrabByPlayer = 10;
 
@@ -55,7 +55,7 @@ public class Grab : MonoBehaviour
                     rb.AddForce(direction * grabPower * Time.fixedDeltaTime);
 
                 }
-                else rbRef.AddForce(-direction * grabPower * Time.fixedDeltaTime);
+                else rbRef.velocity = -direction * grabPower * Time.fixedDeltaTime; ;
             }
         }
     }
