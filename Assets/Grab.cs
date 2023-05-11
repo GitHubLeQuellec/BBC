@@ -13,9 +13,10 @@ public class Grab : MonoBehaviour
     private Vector2 aidepose;
     [SerializeField] GameObject aide;
     float range = 5;
-    float grabPower = 10000;
+    [SerializeField] float grabPower = 100;
     public GameObject aim;
     [SerializeField] float limitGrabByPlayer = 10;
+    [SerializeField] float maxSpeed = 1; // Vitesse maximale autorisée
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class Grab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void FixedUpdate()
     {
@@ -55,7 +56,11 @@ public class Grab : MonoBehaviour
                     rb.AddForce(direction * grabPower * Time.fixedDeltaTime);
 
                 }
-                else rbRef.velocity = -direction * grabPower * Time.fixedDeltaTime; ;
+                else
+                {
+                    rbRef.velocity = -direction * grabPower * Time.fixedDeltaTime;
+                    rbRef.velocity = new Vector2(Mathf.Clamp(rbRef.velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(rbRef.velocity.y, -maxSpeed, maxSpeed)); // Limite de vitesse
+                }
             }
         }
     }

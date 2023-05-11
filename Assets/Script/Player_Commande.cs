@@ -11,11 +11,14 @@ public class Player_Commande : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded = false;
+    Animator Anim;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 3;
+        Anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -40,11 +43,35 @@ public class Player_Commande : MonoBehaviour
             }
         }
 
+        if (isGrounded)
+        {
+            Anim.SetBool("JumpLoop", false);
+        }
+        else if (isGrounded==false && Anim.GetBool("isJumping") == false)
+        {
+            Anim.SetBool("JumpLoop", true);
+        }
+
+        if(isGrounded && Anim.GetBool("JumpLoop")==false )
+        {
+            Anim.SetBool("Roost", true);
+        }
+        else
+        {
+            Anim.SetBool("Roost", false);
+        }
 
         // saut
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            Anim.SetBool("isJumping",true);
         }
+        if (Anim.GetBool("isJumping")==true && rb.velocity.y < 0)
+        {
+            Anim.SetBool("isJumping", false);
+            Anim.SetBool("JumpLoop", true);
+        }
+
     }
 }
