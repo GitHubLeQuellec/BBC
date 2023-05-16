@@ -114,7 +114,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 184, y: 1646}
-    spritePosition: {x: 1126, y: 442}
+    spritePosition: {x: 1127, y: 442}
   - name: Bras
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -840,7 +840,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 3617, y: 1646}
-    spritePosition: {x: 1150, y: 151}
+    spritePosition: {x: 1153, y: 153}
   - name: PiedD
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1464,8 +1464,294 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
+      x: 2826
+      y: 1896
+      width: 138
+      height: 131
+    spriteID: 882201a096aa4b94089535f616fc1254
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2826, y: 1896}
+    spritePosition: {x: 891, y: 475}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2460
+      y: 1897
+      width: 138
+      height: 131
+    spriteID: e19eafba41c24e048b8fc6ecab1a89fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2460, y: 1897}
+    spritePosition: {x: 1040, y: 338}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3093
+      y: 1300
+      width: 133
+      height: 127
+    spriteID: ce40d5bbe619d5e41a7eacb4fcb9352d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3093, y: 1300}
+    spritePosition: {x: 1028, y: 349}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3922
+      y: 659
+      width: 138
+      height: 131
+    spriteID: d6224078f8c303b43b0cf036e91452eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3922, y: 659}
+    spritePosition: {x: 1020, y: 347}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3234
+      y: 1300
+      width: 129
+      height: 125
+    spriteID: 8eab8b3a2e1fdb44a9ac3511fc5e1f49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3234, y: 1300}
+    spritePosition: {x: 1029, y: 355}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3922
+      y: 798
+      width: 138
+      height: 131
+    spriteID: 24c68ce8ff934044ab8bb3d5a99bf475
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3922, y: 798}
+    spritePosition: {x: 999, y: 368}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3388
+      y: 1154
+      width: 138
+      height: 131
+    spriteID: 7daaa0e0e5231194f99dd11ccb99282f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3388, y: 1154}
+    spritePosition: {x: 993, y: 374}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3534
+      y: 1154
+      width: 138
+      height: 131
+    spriteID: 6aa9f1c9b2ecff944ad4c603d79c9cd2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3534, y: 1154}
+    spritePosition: {x: 998, y: 370}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3938
+      y: 944
+      width: 138
+      height: 131
+    spriteID: 60585a479f0eaa6459e9fdcaba282253
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3938, y: 944}
+    spritePosition: {x: 993, y: 373}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2950
+      y: 1300
+      width: 135
+      height: 128
+    spriteID: 5939240a29a59f149832e988ad785748
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2950, y: 1300}
+    spritePosition: {x: 1001, y: 370}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3938
+      y: 1083
+      width: 138
+      height: 131
+    spriteID: c47b39ef4f8bd9345b9efe67029a2dc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3938, y: 1083}
+    spritePosition: {x: 992, y: 372}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
       x: 3403
       y: 1896
+      width: 140
+      height: 136
+    spriteID: 882fa3185d5b48c48b89c76c553dd17a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3403, y: 1896}
+    spritePosition: {x: 996, y: 362}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3188
+      y: 1896
+      width: 140
+      height: 136
+    spriteID: 91d2648cbf591dc409a12f16a2f96774
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3188, y: 1896}
+    spritePosition: {x: 991, y: 359}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2658
+      y: 1300
       width: 138
       height: 131
     spriteID: 6eee99bd49095b9478477104f274952a
@@ -1477,8 +1763,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 3403, y: 1896}
-    spritePosition: {x: 980, y: 378}
+    uvTransform: {x: 2658, y: 1300}
+    spritePosition: {x: 995, y: 365}
+  - name: CuisseG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2804
+      y: 1300
+      width: 138
+      height: 131
+    spriteID: c10b08dc2b2549449877dbf52a6bac83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2804, y: 1300}
+    spritePosition: {x: 999, y: 357}
   - name: corps
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2455,13 +2763,163 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 0
+  - name: "Groupe vid\xE9o 5"
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e278a84f32185974884a4f71e8ccd724
+    layerID: 196
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
   - name: CuisseG
     spriteName: CuisseG
     isGroup: 0
-    parentIndex: -1
+    parentIndex: 66
+    spriteID: 882201a096aa4b94089535f616fc1254
+    layerID: 210
+    mosaicPosition: {x: 2826, y: 1896}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: e19eafba41c24e048b8fc6ecab1a89fd
+    layerID: 209
+    mosaicPosition: {x: 2460, y: 1897}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: ce40d5bbe619d5e41a7eacb4fcb9352d
+    layerID: 208
+    mosaicPosition: {x: 3093, y: 1300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: d6224078f8c303b43b0cf036e91452eb
+    layerID: 207
+    mosaicPosition: {x: 3922, y: 659}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 8eab8b3a2e1fdb44a9ac3511fc5e1f49
+    layerID: 206
+    mosaicPosition: {x: 3234, y: 1300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 24c68ce8ff934044ab8bb3d5a99bf475
+    layerID: 205
+    mosaicPosition: {x: 3922, y: 798}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 7daaa0e0e5231194f99dd11ccb99282f
+    layerID: 204
+    mosaicPosition: {x: 3388, y: 1154}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 6aa9f1c9b2ecff944ad4c603d79c9cd2
+    layerID: 203
+    mosaicPosition: {x: 3534, y: 1154}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 60585a479f0eaa6459e9fdcaba282253
+    layerID: 202
+    mosaicPosition: {x: 3938, y: 944}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 5939240a29a59f149832e988ad785748
+    layerID: 201
+    mosaicPosition: {x: 2950, y: 1300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: c47b39ef4f8bd9345b9efe67029a2dc8
+    layerID: 200
+    mosaicPosition: {x: 3938, y: 1083}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 882fa3185d5b48c48b89c76c553dd17a
+    layerID: 199
+    mosaicPosition: {x: 3403, y: 1896}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: 91d2648cbf591dc409a12f16a2f96774
+    layerID: 198
+    mosaicPosition: {x: 3188, y: 1896}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
     spriteID: 6eee99bd49095b9478477104f274952a
     layerID: 18
-    mosaicPosition: {x: 3403, y: 1896}
+    mosaicPosition: {x: 2658, y: 1300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: CuisseG
+    spriteName: CuisseG
+    isGroup: 0
+    parentIndex: 66
+    spriteID: c10b08dc2b2549449877dbf52a6bac83
+    layerID: 195
+    mosaicPosition: {x: 2804, y: 1300}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -2478,7 +2936,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: f942f32ffa0d4a04ca8d7d1a1546176f
     layerID: 144
     mosaicPosition: {x: 3631, y: 4}
@@ -2488,7 +2946,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 3db2cc57f8a74a445bc161d8219bbe8d
     layerID: 143
     mosaicPosition: {x: 363, y: 659}
@@ -2498,7 +2956,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 9e1a8fcdc36793142a2cbb8cb42ac4bc
     layerID: 142
     mosaicPosition: {x: 4, y: 659}
@@ -2508,7 +2966,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 954dc359a8ee26a469437f52dc0d9070
     layerID: 141
     mosaicPosition: {x: 1093, y: 4}
@@ -2518,7 +2976,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: c9b2d9395afb50f4ab4fc6ca3bf9c705
     layerID: 140
     mosaicPosition: {x: 4, y: 4}
@@ -2528,7 +2986,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: ca9eb23c7af25ee4e81666d262cca4c0
     layerID: 139
     mosaicPosition: {x: 1456, y: 4}
@@ -2538,7 +2996,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 632e91ce503c8574bb76a0848aa3c7f0
     layerID: 138
     mosaicPosition: {x: 367, y: 4}
@@ -2548,7 +3006,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 4cf103a5045ad8e4c8eee2d7c55ed0f5
     layerID: 137
     mosaicPosition: {x: 1819, y: 4}
@@ -2558,7 +3016,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 50eb2464cbf85d94cbc582fba3268e6b
     layerID: 136
     mosaicPosition: {x: 730, y: 4}
@@ -2568,7 +3026,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: d1e775c8d416f944e99aeaa94e5377c6
     layerID: 135
     mosaicPosition: {x: 2182, y: 4}
@@ -2578,7 +3036,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: e35b8de6476bc4b4f998b52707c4f296
     layerID: 134
     mosaicPosition: {x: 2545, y: 4}
@@ -2588,7 +3046,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 7900f1b933cec6c4e8dc1886472d4214
     layerID: 133
     mosaicPosition: {x: 2908, y: 4}
@@ -2598,7 +3056,7 @@ ScriptedImporter:
   - name: corps
     spriteName: corps
     isGroup: 0
-    parentIndex: 67
+    parentIndex: 82
     spriteID: 305c39fc24a81884db7194b745c07dcb
     layerID: 71
     mosaicPosition: {x: 3270, y: 4}

@@ -93,6 +93,28 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Noir et blanc 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1709
+      y: 3537
+      width: 0
+      height: 0
+    spriteID: dad8ac5a87b0b7246ae429ce0d088e73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1709, y: 3537}
+    spritePosition: {x: 0, y: 1080}
   - name: Calque 8
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -299,6 +321,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Noir et blanc 1
+    spriteName: Noir et blanc 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dad8ac5a87b0b7246ae429ce0d088e73
+    layerID: 46
+    mosaicPosition: {x: 1709, y: 3537}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Calque 8
     spriteName: Calque 8
     isGroup: 0
