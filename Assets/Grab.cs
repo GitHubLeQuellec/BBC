@@ -42,7 +42,7 @@ public class Grab : MonoBehaviour
         direction = Vector3.Normalize(direction);
         Debug.DrawRay(transform.position, direction * range, Color.magenta, 0, false);
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction, range, LayerMask.GetMask("Grabbed"));
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction, range, LayerMask.GetMask("Grabbed") | LayerMask.GetMask("GrabPlat"));
 
         if (Input.GetMouseButton(0))
         {
