@@ -869,6 +869,9 @@ MonoBehaviour:
   target: {fileID: 2068883288}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: -46.7}
+  speed: 0
+  startingPoint: 0
+  points: []
 --- !u!1 &411390349
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,6 +4282,7 @@ GameObject:
   - component: {fileID: 2068883283}
   - component: {fileID: 2068883282}
   - component: {fileID: 2068883281}
+  - component: {fileID: 2068883289}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -4391,6 +4395,8 @@ MonoBehaviour:
   GrabPlat:
     serializedVersion: 2
     m_Bits: 512
+  collider1: {fileID: 2068883287}
+  collider2: {fileID: 2068883289}
 --- !u!114 &2068883285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4453,7 +4459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068883280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.75, y: -1.54, z: 0}
+  m_LocalPosition: {x: -21.75, y: -1.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4462,6 +4468,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &2068883289
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068883280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01, y: 0.02}
+  m_Size: {x: 2.14, y: 0.52}
+  m_Direction: 1
 --- !u!1001 &2074203301
 PrefabInstance:
   m_ObjectHideFlags: 0

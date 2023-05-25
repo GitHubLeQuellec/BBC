@@ -9,7 +9,7 @@ public class ChgtScene1 : MonoBehaviour
     public float fadeDuration = 1f; // La durée du fondu en secondes
     public Image fadeImage; // L'image utilisée pour le fondu (assure-toi qu'elle remplit l'écran)
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {

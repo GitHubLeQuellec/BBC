@@ -14,6 +14,7 @@ public class ChgtScene : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             StartCoroutine(ChangeSceneWithFade());
+            Debug.Log("contact");
         }
     }
 

@@ -18,6 +18,11 @@ public class Player_Commande : MonoBehaviour
     private CapsuleCollider2D playerCollider;
     Animator Anim;
 
+
+    public CapsuleCollider2D collider1; // Référence au premier collider
+    public CapsuleCollider2D collider2; // Référence au deuxième collider
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,6 +31,9 @@ public class Player_Commande : MonoBehaviour
         playerCollider = GetComponent<CapsuleCollider2D>();
         originalColliderHeight = playerCollider.size.y;
         originalColliderOffset = playerCollider.offset;
+        collider2.enabled = false;
+        collider1.enabled = true;
+
     }
 
     void Update()
@@ -33,16 +41,29 @@ public class Player_Commande : MonoBehaviour
         // vérifie si le joueur touche le sol
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer | GrabPlat);
 
+        if (isCrouching)
+        {
+            collider1.enabled = false;
+            collider2.enabled = true;
+        }
+        else
+        {
+            collider1.enabled = true;
+            collider2.enabled = false;
+        }
+
         // déplacement horizontal
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         if (isCrouching)
         {
             rb.velocity = new Vector2(moveInput * moveSpeed / 2f, rb.velocity.y);
+            Anim.SetBool("Crouching", true);
         }
         else
         {
             rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+            Anim.SetBool("Crouching", false);
         }
 
         // Turn
@@ -94,18 +115,21 @@ public class Player_Commande : MonoBehaviour
             isCrouching = true;
             playerCollider.size = new Vector2(playerCollider.size.x, originalColliderHeight / 2f);
             playerCollider.offset = new Vector2(playerCollider.offset.x, originalColliderOffset.y - originalColliderHeight / 4f);
-            
+
+           
+
         }
         else if (isCrouching && (Input.GetKeyUp(KeyCode.S) || !isGrounded))
         {
             // Vérifier s'il y a un collider au-dessus du joueur
-            bool hasCeilingCollider = Physics2D.Raycast(transform.position, Vector2.up, originalColliderHeight / 2f, groundLayer | GrabPlat);
+            bool hasCeilingCollider = Physics2D.Raycast(transform.position, Vector2.up, originalColliderHeight / 1f, groundLayer | GrabPlat);
 
             if (!hasCeilingCollider)
             {
                 isCrouching = false;
                 playerCollider.size = new Vector2(playerCollider.size.x, originalColliderHeight);
                 playerCollider.offset = originalColliderOffset;
+                
             }
         }
     }
