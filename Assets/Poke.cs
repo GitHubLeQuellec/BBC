@@ -48,5 +48,17 @@ public class Poke : MonoBehaviour
         player.transform.position = points[5].position;
         yield return new WaitForSeconds(1);
         player.transform.position = points[6].position;
+        yield return new WaitForSeconds(1);
+        player.transform.position = points[7].position;
+        yield return new WaitForSeconds(1);
+        player.transform.position = points[8].position;
+        yield return new WaitForSeconds(1);
+        player.transform.position = points[9].position;
+        yield return new WaitForSeconds(1);
+        player.transform.position = points[10].position;
+        yield return new WaitForSeconds(1);
+        player.transform.position = points[11].position;
+        yield return new WaitForSeconds(1);
+        player.transform.position = points[12].position;
     }
 }
