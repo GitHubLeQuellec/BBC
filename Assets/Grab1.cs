@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grab : MonoBehaviour
+public class Grab1 : MonoBehaviour
 {
     Rigidbody2D rb;
     float horizontal_value;
@@ -38,9 +38,9 @@ public class Grab : MonoBehaviour
         propulsionDir = Vector3.Normalize(propulsionDir);
         Debug.DrawRay(transform.position, propulsionDir * range, Color.magenta, 0, false);
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, propulsionDir, range, LayerMask.GetMask("Grabbed") | LayerMask.GetMask("GrabPlat"));
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, propulsionDir, range, LayerMask.GetMask("trouduc"));
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(1))
         {
             for (int i = 0; i < hits.Length; i++)
             {
@@ -48,14 +48,16 @@ public class Grab : MonoBehaviour
                 Rigidbody2D rbRef = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
                 if (rbRef.mass > limitGrabByPlayer)
                 {
-                    rb.AddForce(propulsionDir * grabPower * Time.fixedDeltaTime);
+                    rbRef.AddForce(propulsionDir * grabPower*20 * Time.fixedDeltaTime);
                 }
                 else
                 {
-                    rbRef.velocity = -propulsionDir * grabPower * Time.fixedDeltaTime;
+                    rbRef.velocity = propulsionDir * grabPower*20 * Time.fixedDeltaTime;
                     rbRef.velocity = new Vector2(Mathf.Clamp(rbRef.velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(rbRef.velocity.y, -maxSpeed, maxSpeed)); // Limite de vitesse
                 }
             }
+
+
         }
 
         /*if (collectible1Script.IsCollected && Input.GetMouseButtonDown(1))
