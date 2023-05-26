@@ -1654,6 +1654,7 @@ GameObject:
   - component: {fileID: 898030272}
   - component: {fileID: 898030271}
   - component: {fileID: 898030270}
+  - component: {fileID: 898030274}
   m_Layer: 10
   m_Name: Calque 40 copie 2 (7)
   m_TagString: Platform
@@ -1673,7 +1674,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 9
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1768,13 +1769,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898030269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 173.5, y: 0.28, z: 0}
+  m_LocalPosition: {x: -0.45, y: -0.51, z: 0}
   m_LocalScale: {x: 0.24188219, y: 0.24188219, z: 0.24188219}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &898030274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898030269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f6e4f5945cf1b4d82d4aad80953646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  distance: 5
 --- !u!1 &914157264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,7 +2437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303968126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.82, y: -1.06, z: 0}
+  m_LocalPosition: {x: 5.5, y: -1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2767,9 +2782,12 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  PlatRepuls:
+    serializedVersion: 2
+    m_Bits: 2048
   GrabPlat:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   collider1: {fileID: 1416109928}
   collider2: {fileID: 1416109930}
 --- !u!114 &1416109926
@@ -2836,7 +2854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416109921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 172.35, y: -1.15, z: 0}
+  m_LocalPosition: {x: 11.81, y: 2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2874,10 +2892,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aide: {fileID: 1261420662}
-  grabPower: 3000
+  grabPower: 600
   aim: {fileID: 1161047839}
   limitGrabByPlayer: 10
-  maxSpeed: 1
+  maxSpeed: 50
   collectible1Script: {fileID: 1303968127}
   raycastRange: 5
 --- !u!1 &1421777585
@@ -3605,7 +3623,8 @@ GameObject:
   - component: {fileID: 1778866129}
   - component: {fileID: 1778866131}
   - component: {fileID: 1778866130}
-  m_Layer: 7
+  - component: {fileID: 1778866132}
+  m_Layer: 11
   m_Name: Sol (1)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3705,6 +3724,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1778866132
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778866128}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 15
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1839843809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,9 +4012,10 @@ GameObject:
   - component: {fileID: 2139225825}
   - component: {fileID: 2139225827}
   - component: {fileID: 2139225826}
-  m_Layer: 7
+  - component: {fileID: 2139225828}
+  m_Layer: 11
   m_Name: Sol
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4072,3 +4113,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2139225828
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139225824}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 15
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

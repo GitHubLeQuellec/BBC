@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Fin
+  - PlatRepuls
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - Platform
   - Tuyau
   - GrabPlat
+  - fourche
+  - PlatRepuls
   - trouduc
-  - 
-  - 
   - 
   - 
   - 

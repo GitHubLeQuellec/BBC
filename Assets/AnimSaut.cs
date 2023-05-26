@@ -66,7 +66,7 @@ public class AnimSaut : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Vérifier si le joueur touche le sol
-        if (collision.CompareTag("Platform")| collision.CompareTag("GrabPlat"))
+        if (collision.CompareTag("Platform")|| collision.CompareTag("PlatRepuls") || collision.CompareTag("GrabPlat"))
         {
             isGrounded = true;
             

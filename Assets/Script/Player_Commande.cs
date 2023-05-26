@@ -8,6 +8,7 @@ public class Player_Commande : MonoBehaviour
     public float jumpForce = 10f; // force de saut
     public Transform groundCheck; // objet qui vérifie si le joueur touche le sol
     public LayerMask groundLayer;
+    public LayerMask PlatRepuls;
     public LayerMask GrabPlat; // couche du sol
 
     private Rigidbody2D rb;
@@ -39,7 +40,7 @@ public class Player_Commande : MonoBehaviour
     void Update()
     {
         // vérifie si le joueur touche le sol
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer | GrabPlat);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer | GrabPlat | PlatRepuls);
 
         if (isCrouching)
         {
@@ -122,7 +123,7 @@ public class Player_Commande : MonoBehaviour
         else if (isCrouching && (Input.GetKeyUp(KeyCode.S) || !isGrounded))
         {
             // Vérifier s'il y a un collider au-dessus du joueur
-            bool hasCeilingCollider = Physics2D.Raycast(transform.position, Vector2.up, originalColliderHeight / 1f, groundLayer | GrabPlat);
+            bool hasCeilingCollider = Physics2D.Raycast(transform.position, Vector2.up, originalColliderHeight / 1f, groundLayer | GrabPlat | PlatRepuls);
 
             if (!hasCeilingCollider)
             {

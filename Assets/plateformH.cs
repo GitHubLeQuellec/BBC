@@ -28,16 +28,7 @@ public class plateformH : MonoBehaviour
         // Déplace la plateforme dans la direction de l'axe X en utilisant la vitesse et la direction actuelle
         transform.Translate(Vector3.right * speed * direction * Time.deltaTime);
 
-        // Si la plateforme a atteint sa distance maximale de déplacement à droite, inverse la direction pour la faire revenir à gauche
-        if (transform.position.x > startPosition.x + distance)
-        {
-            direction = -1.0f;
-        }
-        // Si la plateforme a atteint sa distance maximale de déplacement à gauche, inverse la direction pour la faire revenir à droite
-        else if (transform.position.x < startPosition.x)
-        {
-            direction = 1.0f;
-        }
+        
     }
 }
 

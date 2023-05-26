@@ -4392,6 +4392,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  PlatRepuls:
+    serializedVersion: 2
+    m_Bits: 0
   GrabPlat:
     serializedVersion: 2
     m_Bits: 512
@@ -4410,10 +4413,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aide: {fileID: 1445011246}
-  grabPower: 3000
+  grabPower: 300
   aim: {fileID: 1870335002}
   limitGrabByPlayer: 10
   maxSpeed: 1
+  collectible1Script: {fileID: 0}
+  raycastRange: 5
 --- !u!50 &2068883286
 Rigidbody2D:
   serializedVersion: 4
