@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 898030272}
   - component: {fileID: 898030271}
   - component: {fileID: 898030270}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Calque 40 copie 2 (7)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -2779,7 +2779,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416109921}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 566591aa9efdb014593e81ad7f22596b, type: 3}
   m_Name: 
