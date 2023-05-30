@@ -50,6 +50,11 @@ public class Grab1 : MonoBehaviour
         {
             for (int i = 0; i < hits.Length; i++)
             {
+                if (hits[i].transform.gameObject.layer == LayerMask.NameToLayer("fourche"))
+                {
+                    hits[i].transform.gameObject.GetComponent<Fork>().enabled = false;
+                    hits[i].transform.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                }
                 Debug.Log(hits[i].collider.name);
                 Rigidbody2D rbRef = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
                 if (rbRef.mass > limitGrabByPlayer  )

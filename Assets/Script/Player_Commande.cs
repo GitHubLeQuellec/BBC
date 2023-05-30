@@ -14,6 +14,7 @@ public class Player_Commande : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private bool isCrouching = false;
+    private bool isJumping = false;
     private float originalColliderHeight;
     private Vector2 originalColliderOffset;
     private CapsuleCollider2D playerCollider;
@@ -34,7 +35,6 @@ public class Player_Commande : MonoBehaviour
         originalColliderOffset = playerCollider.offset;
         collider2.enabled = false;
         collider1.enabled = true;
-
     }
 
     void Update()
@@ -42,42 +42,33 @@ public class Player_Commande : MonoBehaviour
         // vérifie si le joueur touche le sol
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer | GrabPlat | PlatRepuls);
 
+        // déplacement horizontal
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        // Mettre à jour la variable Run
+        bool shouldRun = (Mathf.Abs(rb.velocity.x) != 0 || Mathf.Abs(moveInput) > 0) && isCrouching == false && isGrounded == true;
+
+        // Mettre à jour l'animation IsRunning
+        Anim.SetBool("IsRunning", shouldRun);
+
         if (isCrouching)
         {
             collider1.enabled = false;
             collider2.enabled = true;
+            Anim.SetBool("Crouching", true);
         }
         else
         {
             collider1.enabled = true;
             collider2.enabled = false;
-        }
-
-        // déplacement horizontal
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-        if (isCrouching)
-        {
-            rb.velocity = new Vector2(moveInput * moveSpeed / 2f, rb.velocity.y);
-            Anim.SetBool("Crouching", true);
-        }
-        else
-        {
-            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
             Anim.SetBool("Crouching", false);
         }
 
         // Turn
         if (moveInput != 0)
         {
-            if (moveInput > 0)
-            {
-                transform.localScale = new Vector2(1f, 1f); // tourne le personnage à droite
-            }
-            else
-            {
-                transform.localScale = new Vector2(-1f, 1f); // tourne le personnage à gauche
-            }
+            transform.localScale = new Vector2(Mathf.Sign(moveInput), 1f);
         }
 
         if (isGrounded)
@@ -101,13 +92,16 @@ public class Player_Commande : MonoBehaviour
         // saut
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            isJumping = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             Anim.SetBool("isJumping", true);
+            
         }
-        if (Anim.GetBool("isJumping") == true && rb.velocity.y < 0)
+        if (isJumping && rb.velocity.y < 0)
         {
             Anim.SetBool("isJumping", false);
             Anim.SetBool("JumpLoop", true);
+            isJumping = false;
         }
 
         // accroupissement
@@ -116,9 +110,6 @@ public class Player_Commande : MonoBehaviour
             isCrouching = true;
             playerCollider.size = new Vector2(playerCollider.size.x, originalColliderHeight / 2f);
             playerCollider.offset = new Vector2(playerCollider.offset.x, originalColliderOffset.y - originalColliderHeight / 4f);
-
-           
-
         }
         else if (isCrouching && (Input.GetKeyUp(KeyCode.S) || !isGrounded))
         {
@@ -130,7 +121,6 @@ public class Player_Commande : MonoBehaviour
                 isCrouching = false;
                 playerCollider.size = new Vector2(playerCollider.size.x, originalColliderHeight);
                 playerCollider.offset = originalColliderOffset;
-                
             }
         }
     }

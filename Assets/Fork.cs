@@ -3,16 +3,26 @@ using UnityEngine;
 public class Fork : MonoBehaviour
 {
     public float moveSpeed = 20f;
-    public float lifespan = 3f;
+    public float lifespan = 0.3f;
+    [SerializeField] private GameObject Player;
+    private Rigidbody2D rb;
+    Vector2 direction; 
 
-    private void Update()
+    private void Awake()
     {
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        rb = GetComponent<Rigidbody2D>();
+        direction = (Player.transform.position - transform.position);
+    }
+
+    private void FixedUpdate()
+    {
+        transform.Translate(direction * moveSpeed * Time.deltaTime);
+        //transform.rotation = direction;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("BossCollider"))
+        /*if (collision.gameObject.CompareTag("BossCollider"))
         {
             Rigidbody2D forkRigidbody = collision.gameObject.GetComponent<Rigidbody2D>();
             if (forkRigidbody != null)
@@ -21,16 +31,20 @@ public class Fork : MonoBehaviour
                 Destroy(gameObject, lifespan);
                 Debug.Log("mort1");
             }
-        }
-        if (collision.gameObject.CompareTag("Plateform"))
+        }*/
+        if (collision.gameObject.CompareTag("Platform"))
         {
-            Destroy(gameObject, lifespan);
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("mort2");
         }
-        if (collision.gameObject.CompareTag("player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject, lifespan);
+            Destroy(gameObject);
             Debug.Log("mort3");
+        }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("fourche"))
+        {
+            Destroy(gameObject);
         }
     }
 }
