@@ -19,6 +19,7 @@ public class Player_Commande : MonoBehaviour
     private Vector2 originalColliderOffset;
     private CapsuleCollider2D playerCollider;
     Animator Anim;
+    
 
 
     public CapsuleCollider2D collider1; // Référence au premier collider

@@ -17,10 +17,12 @@ public class Grab1 : MonoBehaviour
     [SerializeField] float maxSpeed = 1; // Vitesse maximale autorisée
     [SerializeField] Collectible1 collectible1Script;
     private bool canRepuls = true;
+    [SerializeField] Animator Anim;
 
     [SerializeField] float raycastRange = 5f; // Ajout de la variable raycastRange
+    public Camera cam;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +30,13 @@ public class Grab1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         collectible1Script = GameObject.FindObjectOfType<Collectible1>();
+        cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        aim.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        aim.transform.position = cam.ScreenToWorldPoint(Input.mousePosition);
         aim.transform.position = new Vector3(aim.transform.position.x, aim.transform.position.y, 0);
         horizontal_value = Input.GetAxis("Horizontal");
         vertical_value = Input.GetAxis("Vertical");
@@ -63,9 +65,11 @@ public class Grab1 : MonoBehaviour
                 }
                 else
                 {
+                    Anim.SetBool("Bumping", true);
                     rbRef.velocity = Vector2.zero;
                     rbRef.velocity = propulsionDir * grabPower*20 * Time.fixedDeltaTime;
                     rbRef.velocity = new Vector2(Mathf.Clamp(rbRef.velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(rbRef.velocity.y, -maxSpeed, maxSpeed)); // Limite de vitesse
+                    
                 }
             }
             canRepuls = false; // Désactive le grab pour le cooldown

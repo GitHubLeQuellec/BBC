@@ -4,16 +4,20 @@ public class Fork : MonoBehaviour
 {
     public float moveSpeed = 20f;
     public float lifespan = 0.3f;
-    [SerializeField] private GameObject Player;
+    private GameObject Player;
     private Rigidbody2D rb;
     Vector2 direction; 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        direction = (Player.transform.position - transform.position);
     }
 
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        direction = (Player.transform.position - transform.position);
+    }
     private void FixedUpdate()
     {
         transform.Translate(direction * moveSpeed * Time.deltaTime);

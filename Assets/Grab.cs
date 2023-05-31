@@ -18,18 +18,19 @@ public class Grab : MonoBehaviour
     [SerializeField] Collectible1 collectible1Script;
 
     [SerializeField] float raycastRange = 5f; // Ajout de la variable raycastRange
+    public Camera cam;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collectible1Script = GameObject.FindObjectOfType<Collectible1>();
+        cam = Camera.main;
     }
-
     // Update is called once per frame
     void Update()
     {
-        aim.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        aim.transform.position = cam.ScreenToWorldPoint(Input.mousePosition);
         aim.transform.position = new Vector3(aim.transform.position.x, aim.transform.position.y, 0);
         horizontal_value = Input.GetAxis("Horizontal");
         vertical_value = Input.GetAxis("Vertical");
@@ -81,4 +82,3 @@ public class Grab : MonoBehaviour
 
     }
 }
-

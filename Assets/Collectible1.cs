@@ -25,7 +25,7 @@ public class Collectible1 : MonoBehaviour
 
     private void Update()
     {
-        if (IsCollected && Input.GetMouseButtonDown(1))
+        /*if (IsCollected && Input.GetMouseButtonDown(1))
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(transform.position, mousePosition - (Vector2)transform.position, raycastRange);
@@ -36,6 +36,6 @@ public class Collectible1 : MonoBehaviour
                 Vector2 direction = (Vector2)transform.position - hit.point;
                 playerRigidbody.AddForce(direction.normalized * propulsionForce, ForceMode2D.Impulse);
             }
-        }
+        }*/
     }
 }
