@@ -19,7 +19,11 @@ public class Player_Commande : MonoBehaviour
     private Vector2 originalColliderOffset;
     private CapsuleCollider2D playerCollider;
     Animator Anim;
+    public int maxHealth = 50;
+    public int currentHealth;
+    public HealthBar HealthBar;
     
+
 
 
     public CapsuleCollider2D collider1; // Référence au premier collider
@@ -36,10 +40,13 @@ public class Player_Commande : MonoBehaviour
         originalColliderOffset = playerCollider.offset;
         collider2.enabled = false;
         collider1.enabled = true;
+        currentHealth = maxHealth;
+        HealthBar.SetMaxhealth(maxHealth);
     }
 
     void Update()
     {
+       
         // vérifie si le joueur touche le sol
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer | GrabPlat | PlatRepuls);
 
@@ -124,5 +131,24 @@ public class Player_Commande : MonoBehaviour
                 playerCollider.offset = originalColliderOffset;
             }
         }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("BossCollider"))
+        {
+            TakeDamage(10);
+            Debug.Log("coupdeZGEG");
+        }
+        if(other.CompareTag("fourche"))
+        {
+            TakeDamage(10);
+            Debug.Log("CoupDeFourche");
+            Destroy(other.gameObject);
+        }
+    }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        HealthBar.SetHealth(currentHealth);
     }
 }

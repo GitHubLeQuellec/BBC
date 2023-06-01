@@ -8,6 +8,7 @@ TagManager:
   - Fin
   - PlatRepuls
   - BossCollider
+  - fourche
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - GrabPlat
   - fourche
   - PlatRepuls
-  - trouduc
   - 
+  - boss
   - 
   - 
   - 

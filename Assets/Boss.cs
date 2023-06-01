@@ -15,6 +15,7 @@ public class Boss : MonoBehaviour
     public int currentHealth;
     public HealthBar HealthBar;
 
+
     void Start()
     {
         currentHealth = maxHealth;

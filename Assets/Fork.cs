@@ -6,7 +6,8 @@ public class Fork : MonoBehaviour
     public float lifespan = 0.3f;
     private GameObject Player;
     private Rigidbody2D rb;
-    Vector2 direction; 
+    Vector2 direction;
+    
 
     private void Awake()
     {
@@ -41,11 +42,7 @@ public class Fork : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("mort2");
         }
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            Debug.Log("mort3");
-        }
+        
         if (collision.gameObject.layer == LayerMask.NameToLayer("fourche"))
         {
             Destroy(gameObject);
