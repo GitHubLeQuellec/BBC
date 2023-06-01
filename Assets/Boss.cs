@@ -11,9 +11,14 @@ public class Boss : MonoBehaviour
     private Animator Anim;
     [SerializeField]  int randomAnimation;
     [SerializeField] Rigidbody2D rbPlayer;
+    public int maxHealth = 200;
+    public int currentHealth;
+    public HealthBar HealthBar;
 
     void Start()
     {
+        currentHealth = maxHealth;
+        HealthBar.SetMaxhealth(maxHealth);
         Anim = GetComponent<Animator>();
         InvokeRepeating("PlayRandomAnimation", 1f, 6f); // Lance une animation toutes les 6 secondes après une première attente de 3 secondes
     }
@@ -84,12 +89,26 @@ public class Boss : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            Vector2 forceDirection = (transform.position - other.transform.position).normalized;
-            float forceMagnitude = 100f; // Modifier la magnitude de la force selon vos besoins
+            Rigidbody2D rb2 = other.GetComponent<Rigidbody2D>(); // Récupère le composant Rigidbody2D du joueur
+            Vector2 forceDirection = (other.transform.position - transform.position).normalized; // Calcule la direction de la force en normalisant le vecteur entre le boss et le joueur
+            float grabPower = 1300f; // Magnitude de la force à appliquer (à ajuster selon vos besoins)
 
-            rb.AddForce(forceDirection * forceMagnitude, ForceMode2D.Impulse);
+            // Ajoute une force au Rigidbody2D en utilisant la direction de force calculée
+            // La composante X de la force est égale à forceDirection.x multipliée par la magnitude de la force et le temps écoulé depuis la dernière frame
+            // La composante Y de la force est égale à forceDirection.y multipliée par la magnitude de la force et le temps écoulé depuis la dernière frame
+            rb2.velocity = (new Vector2(forceDirection.x+1 *10 * grabPower  * Time.fixedDeltaTime, forceDirection.y +1 * grabPower  * Time.fixedDeltaTime));
         }
+        if (LayerMask.LayerToName(other.gameObject.layer) == "fourche")
+        {
+            TakeDamage(10);
+            Debug.Log("PrendsCaConanrd");
+        }
+
+    }
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        HealthBar.SetHealth(currentHealth);
     }
     private void Zgeging()
     {
@@ -105,6 +124,8 @@ public class Boss : MonoBehaviour
     {
         Anim.SetBool("Forking", true);
         StartCoroutine(StopForking());
+        //TakeDamage(100);
+        //Debug.Log("Spawner");
     }
 
     private IEnumerator StopForking()
@@ -116,4 +137,5 @@ public class Boss : MonoBehaviour
     {
         Anim.SetBool("Idle", true);
     }
+
 }

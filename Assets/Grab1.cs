@@ -45,24 +45,47 @@ public class Grab1 : MonoBehaviour
         propulsionDir = Vector3.Normalize(propulsionDir);
         Debug.DrawRay(transform.position, propulsionDir * range, Color.magenta, 0, false);
 
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, propulsionDir, range, LayerMask.GetMask("fourche", "PlatRepuls")); 
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, propulsionDir, range, LayerMask.GetMask("fourche", "PlatRepuls"));
         //, "PlatRepuls")
+        
+        
+           
+            //if (spriteRenderer != null)
+           // {
+                // Utilisez spriteRenderer pour effectuer des opérations sur le sprite de l'objet "fourche"
+                // Par exemple, vous pouvez accéder à spriteRenderer.sprite pour obtenir le sprite actuel de l'objet
+                // Ou utilisez spriteRenderer.flipX pour inverser le sprite horizontalement
 
-        if (collectible1Script.IsCollected && Input.GetMouseButton(1) && canRepuls)
+                 // Exemple: Inverser le sprite horizontalement
+           // }
+
+            if (collectible1Script.IsCollected && Input.GetMouseButton(1) && canRepuls)
         {
             for (int i = 0; i < hits.Length; i++)
             {
-                if (hits[i].transform.gameObject.layer == LayerMask.NameToLayer("fourche"))
+                    SpriteRenderer spriteRenderer = hits[i].transform.gameObject.GetComponentInChildren<SpriteRenderer>();
+                    if (hits[i].transform.gameObject.layer == LayerMask.NameToLayer("fourche"))
                 {
+
                     hits[i].transform.gameObject.GetComponent<Fork>().enabled = false;
                     hits[i].transform.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 }
+                    spriteRenderer.flipX = true;
                 Debug.Log(hits[i].collider.name);
                 Rigidbody2D rbRef = hits[i].transform.gameObject.GetComponent<Rigidbody2D>();
                 if (rbRef.mass > limitGrabByPlayer  )
                 {
                     rb.AddForce(-propulsionDir * grabPower*100 * Time.fixedDeltaTime);
+                    spriteRenderer.flipX = true;
                 }
+
+
+
+
+
+
+
+
                 else
                 {
                     Anim.SetBool("Bumping", true);
